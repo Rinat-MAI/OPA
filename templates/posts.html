@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>Список всех пользователей</h1>
+
+    {% for el in articles %}
+
+    <div class="alert alert-info">
+        <h2>{{ el.title }}</h2>
+        <a href="/posts/{{ el.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/posts/{{ el.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+
+    {% endfor %}
+</div>
+{% endblock %}
